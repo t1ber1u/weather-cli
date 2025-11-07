@@ -25,7 +25,7 @@ async fn main() -> Result<()> {
     // Initialize state and API client
     let mut app = App::new(cities);
     let api_key = load_api_key()?;
-    let client = WeatherClient::new(api_key, "imperial");
+    let client = WeatherClient::new(api_key, "metric");
 
     // Prime cache for first city (optional, but nice UX)
     if let Some(city) = app.selected_city().map(|s| s.to_string()) {

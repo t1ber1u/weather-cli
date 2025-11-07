@@ -57,7 +57,7 @@ fn draw_body(frame: &mut Frame, area: Rect, app: &App) {
         if let Some(info) = app.get_weather(city) {
             vec![
                 Line::raw(format!("City: {}", info.name)),
-                Line::raw(format!("Temp: {:.1}°F", info.temp_c)),
+                Line::raw(format!("Temp: {:.1}°C", info.temp_c)),
                 Line::raw(format!("Humidity: {}%", info.humidity)),
                 Line::raw(format!("Pressure: {} hPa", info.pressure)),
                 Line::raw(format!("Wind: {:.1} m/s", info.wind_speed)),
